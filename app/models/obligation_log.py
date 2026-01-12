@@ -42,12 +42,12 @@ class ObligationLog(Base):
 
     notes: Mapped[str | None] = mapped_column(
         String,
-        nullable=False
+        nullable=True
     )
 
     event_metadata: Mapped[dict | None] = mapped_column(
         JSONB,
-        nullable=False
+        nullable=True
     )
     
     obligation = relationship("Obligation")
